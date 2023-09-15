@@ -1,0 +1,38 @@
+<?php
+
+?>
+<html>
+	<head>
+		<title>Kalandar v0.1</title>
+
+        <link rel="stylesheet" href="./assets/css/main.min.css" type="text/css" media="all"/>
+        <link rel="stylesheet" href="./assets/css/theme.min.css" type="text/css" media="all"/>
+        <script type='text/javascript' src='./assets/js/kalandar.min.js'></script>
+
+        <style>
+            body {
+                padding: 50px;
+                color: #2A3747;
+            }
+        </style>
+	</head>
+	<body>
+		<h1>Kalandar v0.1</h1>
+        <p><em>Kalandar</em> in the Hausa language spoken in West Africa refers to the English word <em>calendar</em>.
+        </p>
+        <!-- TODO: store the dates in UTC format in the database or yyyy-mm-dd ??? -->
+        <div class="wrap">
+            <div class="calendar-container"></div>
+        </div>
+        <script>
+            // Fix min/max year and handle string/number values
+            new Kalandar(
+                {
+                    selector: '.calendar-container',
+                    minYear: 2022,
+                    maxYear: 2024
+                }
+            );
+        </script>
+    </body>
+</html>
